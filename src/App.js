@@ -6,6 +6,7 @@ import Home from './components/Home/Home';
 import NavBar from './components/NavBar/NavBar';
 import Contact from './components/Contact/Contact';
 import './App.css';
+import Item from "./components/Products/Item";
 
 function App() {
   // Products State
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route index element={<Home/>}/>
         <Route path="products" element={<Products products={products}/>}/>
+        <Route path="products/:title" element={<Item itemData={products}/>}/>
         <Route path="cart" element={<Cart/>}/>
         <Route path="contact" element={<Contact/>}/>
       </Routes>
