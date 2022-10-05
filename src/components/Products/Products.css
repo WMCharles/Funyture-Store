@@ -13,6 +13,7 @@
     margin: 0 1em;
     float: left;
     margin-bottom: 2em;
+    cursor: pointer;
 }
 
 .image img {
