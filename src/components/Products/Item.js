@@ -5,14 +5,14 @@ import { useParams } from 'react-router-dom'
 export default function Item({itemData}) {
     const {title} = useParams()
     return (
-        <div className='product'>
+        <div className='Product'>
             <h1>Product Details</h1>
             {itemData.filter((item) => item.title === title).map((product) =>
-                <div className='item'>
-                    <div className='image'>
+                <div className='Item'>
+                    <div className='productImage'>
                         <img src={product.image} alt="" />
                     </div>
-                    <div className='description'>
+                    <div className='Description'>
                         <h2>{product.title}</h2>
                         <h3>$ {product.price}</h3>
                         <p>{product.description}</p>
