@@ -1,0 +1,20 @@
+.products {
+    width: 70%;
+    height: 100vh;
+    margin: 4em auto 0 auto;
+}
+
+.products h2 {
+    text-align: center;
+}
+
+.product-container {
+    width: 30%;
+    margin: 0 1em;
+    float: left;
+    margin-bottom: 2em;
+}
+
+.image img {
+    width: 100%;
+}
