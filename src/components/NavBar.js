@@ -4,12 +4,14 @@ import { Link, Outlet} from "react-router-dom"
 export default function NavBar() {
   return (
     <div className='header'>
-        <Link to="/">FUNiture</Link>
-        <div className='menu-items'>
-            <Link to="/">Home</Link>
-            <Link to="/products">Products</Link>
-            <Link to="/cart">Cart</Link>
-            <Link to="/contact">Contact</Link>
+        <div className='navbar-container'>
+            <Link className="navbar-logo" to="/">FUNiture</Link>
+            <div className='nav-menu'>
+                <Link className='nav-links' to="/">Home</Link>
+                <Link className='nav-links' to="/products">Products</Link>
+                <Link className='nav-links' to="/cart">Cart</Link>
+                <Link className='nav-links' to="/contact">Contact</Link>
+            </div>
         </div>
         <Outlet/>
     </div>
