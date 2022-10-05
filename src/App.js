@@ -16,13 +16,13 @@ function App() {
     .then((res) => res.json())
     .then((data) => setProducts(data))
   },[])
-  console.log(products)
+
   return (
     <Router>
       <NavBar/>
       <Routes>
         <Route index element={<Home/>}/>
-        <Route path="products" element={<Products/>}/>
+        <Route path="products" element={<Products products={products}/>}/>
         <Route path="cart" element={<Cart/>}/>
         <Route path="contact" element={<Contact/>}/>
       </Routes>
