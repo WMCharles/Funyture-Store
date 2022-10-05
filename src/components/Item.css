@@ -1,0 +1,46 @@
+.product {
+    width: 70%;
+    height: 100vh;
+    margin: 6em auto 0 auto;
+}
+
+.product h1 {
+    margin-bottom: 1em;
+}
+.item {
+    display: flex;
+}
+
+.item > div {
+    width: 50%;
+}
+
+.description {
+    margin: 0 1em;
+}
+
+.description h2 {
+    margin-bottom: 1em;
+}
+
+.description h3 {
+    color: blue;
+    margin-bottom: 1em;
+}
+
+.description p {
+    font-size: 1.2rem;
+}
+
+.description button {
+    margin-top: 2em;
+    padding: 12px 2em;
+    border: none;
+    font-size: .9em;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
