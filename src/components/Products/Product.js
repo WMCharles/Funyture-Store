@@ -7,11 +7,9 @@ export default function Product({product}) {
           <div className='image'>
             <img src={product.image} alt=''/>
           </div>             
-          <div className='title'>
-              <h3>{product.title}</h3>
-          </div>
-          <div className='price'>
-              <h3>$ {product.price}</h3>
+          <div className='details'>
+              <h2>{product.title}</h2>
+              <h2>$ {product.price}</h2>
           </div>
         </div>
     </div>
