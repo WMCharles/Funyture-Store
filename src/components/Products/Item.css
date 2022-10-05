@@ -1,38 +1,39 @@
-.product {
+.Product {
     width: 70%;
     height: 100vh;
     margin: 6em auto 0 auto;
 }
 
-.product h1 {
+.Product h1 {
     margin-bottom: 1em;
 }
-.item {
+
+.Item {
     display: flex;
 }
 
-.item > div {
+.Item > div {
     width: 50%;
 }
 
-.description {
+.Description {
     margin: 0 1em;
 }
 
-.description h2 {
+.Description h2 {
     margin-bottom: 1em;
 }
 
-.description h3 {
+.Description h3 {
     color: blue;
     margin-bottom: 1em;
 }
 
-.description p {
+.Description p {
     font-size: 1.2rem;
 }
 
-.description button {
+.Description button {
     margin-top: 2em;
     padding: 12px 2em;
     border: none;
@@ -42,5 +43,9 @@
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;
+}
+
+.productImage img{
     width: 100%;
 }
