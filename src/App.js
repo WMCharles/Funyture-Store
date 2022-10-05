@@ -1,12 +1,22 @@
-import React, {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Cart from './components/Cart';
-import Products from './components/Products';
-import Home from './components/Home';
-import NavBar from './components/NavBar';
-import Contact from './components/Contact';
+import React, { useState, useEffect } from "react"
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Cart from "./components/Cart/Cart"
+import Products from './components/Products/Products';
+import Home from './components/Home/Home';
+import NavBar from './components/NavBar/NavBar';
+import Contact from './components/Contact/Contact';
 import './App.css';
 
 function App() {
+  // Products State
+  const [products, setProducts] = useState([])
+  // Fetching Products Data
+  useEffect(() => {
+    fetch("https://blowg.herokuapp.com/products")
+    .then((res) => res.json())
+    .then((data) => setProducts(data))
+  },[])
+  console.log(products)
   return (
     <Router>
       <NavBar/>
