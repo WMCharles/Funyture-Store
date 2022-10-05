@@ -10,7 +10,7 @@ export default function Products({products}) {
             {products.map((product, index) =>
                 <Product product={product}/>
             )} 
-            </div>
+        </div>
     </div>
   )
 }
