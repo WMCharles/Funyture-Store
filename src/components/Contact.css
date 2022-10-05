@@ -48,7 +48,6 @@ form {
     padding: 12px 0;
     border: none;
     border-bottom: 1px solid black;
-    /* border-radius: 5px ; */
 }
 
 .input-control input:focus {
@@ -59,7 +58,6 @@ form {
     padding: 12px 0;
     border: none;
     border-bottom: 1px solid black;
-    /* border-radius: 5px ; */
 }
 
 .input-control textarea:focus {
