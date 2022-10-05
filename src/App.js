@@ -1,4 +1,4 @@
-import React, {BrowserRouter as Router, Routes, Route} from 'react';
+import React, {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Cart from './components/Cart';
 import Products from './components/Products';
 import Home from './components/Home';
