@@ -1,30 +1,33 @@
 import React from 'react'
 import "./Cart.css"
 
-export default function Cart() {
+export default function Cart({cart}) {
   return (
     <div className='cart'>
       <h1>Shopping Cart</h1>
-      <div className='item'>
-        <div className='image'>
-          <img src="https://static6.depositphotos.com/1123553/614/i/600/depositphotos_6142155-stock-photo-yellow-sofa-interior-design.jpg" alt="" />
-        </div>
-        <div className='description'>
-          <div>
-            <h3>Sofa</h3>
+      {cart.map((item) => 
+        <div className='item'>
+          <div className='image'>
+            <img src={item.image} alt="" />
+          </div>
+          <div className='description'>
+            <div>
+              <h3>{item.title}</h3>
+              <br/>
+              <h3 className='price'>$ {item.price}</h3>
+            </div>
+          </div>
+          <div className='quantity'>
+            <button>+</button> 1 <button>-</button>
+          </div>
+          <div className='total-amount'>
+            <h2>$ {item.price}</h2>
             <br/>
-            <h3 className='price'>$ 600</h3>
+            <a href="#">Remove</a>
           </div>
         </div>
-        <div className='quantity'>
-          <button>+</button> 2 <button>-</button>
-        </div>
-        <div className='total-amount'>
-          <h2>$ 600</h2>
-          <br/>
-          <a href="#">Remove</a>
-        </div>
-      </div>
+      )}
+      
       <hr/>
       
       <div className='net'>
@@ -32,7 +35,7 @@ export default function Cart() {
         <div></div>
         <div></div>
         <div className='checkout'>
-          <h1>$ 600</h1>
+          <h1>$ Total</h1>
           <button>Checkout</button>
         </div>
       </div>
