@@ -17,10 +17,10 @@ export default function CartItem({item, removeItem}) {
                 </div>
             </div>
             <div className='quantity'>
-                <button>+</button> 1 <button>-</button>
+                <button>+</button>{item.quantity} <button>-</button>
             </div>
             <div className='total-amount'>
-                <h2>$ {item.price}</h2>
+                <h2>$ {item.price * item.quantity}</h2>
                 <br/>
                 <p onClick={() => removeItemFromCart(item)}>Remove</p>
             </div>
