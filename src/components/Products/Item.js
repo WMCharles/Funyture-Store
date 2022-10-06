@@ -17,7 +17,7 @@ export default function Item({itemData, addToCart}) {
                     </div>
                     <div className='Description'>
                         <h2>{product.title}</h2>
-                        <h3>Edit Details</h3>
+                        <a href={`edit/${product.id}`}><h3>Edit Details</h3></a>
                         <h2>$ {product.price}</h2>
                         <p>{product.description}</p>
                         <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
