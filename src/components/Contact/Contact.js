@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Contact.css"
+import ContactForm from './ContactForm'
 
 export default function Contact() {
   return (
@@ -11,23 +12,7 @@ export default function Contact() {
         </div>
       </div>
       <div className='contact-form'>
-        <form>
-          <div className='input-control'>
-            <label>Name</label>
-            <input type="text" required/>
-          </div>
-          <div className='input-control'>
-            <label>Email</label>
-            <input type="email" required/>
-          </div>
-          <div className='input-control'>
-            <label>Message</label>
-            <textarea cols="" rows="5"></textarea>
-          </div>
-          <div className='input-control'>
-            <button type='submit'>Submit</button>
-          </div>
-        </form>
+        <ContactForm/>
       </div>
     </div>
   )
