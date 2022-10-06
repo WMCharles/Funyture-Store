@@ -23,11 +23,13 @@
     padding: 10px;
 }
 
-.total-amount a {
+.total-amount p {
     font-weight: 700;
     font-size: 1.2em;
-    text-decoration: none;
+    color: red;
+    cursor: pointer;
 }
+
 .price {
     color: blue;
 }

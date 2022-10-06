@@ -19,7 +19,7 @@ export default function CartItem({item}) {
         <div className='total-amount'>
             <h2>$ {item.price}</h2>
             <br/>
-            <a href="#">Remove</a>
+            <p>Remove</p>
         </div>
     </div>
   )
