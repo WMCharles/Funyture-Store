@@ -5,6 +5,8 @@ import Products from './components/Products/Products';
 import Home from './components/Home/Home';
 import NavBar from './components/NavBar/NavBar';
 import Contact from './components/Contact/Contact';
+import AddProduct from "./components/Products/AddProduct"
+
 import './App.css';
 import Item from "./components/Products/Item";
 
@@ -40,6 +42,7 @@ function App() {
         <Route index element={<Home/>}/>
         <Route path="products" element={<Products products={products}/>}/>
         <Route path="products/:title" element={<Item itemData={products} addToCart={addToCart}/>}/>
+        <Route path="products/addproduct" element={<AddProduct/>}/>
         <Route path="cart" element={<Cart cart={cart} removeItem={removeFromCart}/>}/>
         <Route path="contact" element={<Contact/>}/>
       </Routes>
