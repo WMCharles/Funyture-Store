@@ -42,6 +42,18 @@ function App() {
     setProducts(newProducts)
   }
 
+  // Function that updates item quantity in cart
+  const handleChange = (item, d) => {
+    const ind = cart.indexOf(item);
+    const arr = cart;
+    arr[ind].quantity += d;
+
+    if (arr[ind].quantity === 0){
+      arr[ind].quantity = 1;
+    }
+    setCart([...arr]);
+  };
+
   return (
     <Router>
       <NavBar/>
@@ -51,7 +63,7 @@ function App() {
         <Route path="products/:title" element={<Item itemData={products} addToCart={addToCart}/>}/>
         <Route path="products/addproduct" element={<AddProduct addToProducts={addToProducts}/>}/>
         <Route path="products/edit/:id" element={<AddProduct addToProducts={addToProducts}/>}/>
-        <Route path="cart" element={<Cart cart={cart} removeItem={removeFromCart}/>}/>
+        <Route path="cart" element={<Cart cart={cart} removeItem={removeFromCart} handleChange={handleChange}/>}/>
         <Route path="contact" element={<Contact/>}/>
       </Routes>
     </Router>
