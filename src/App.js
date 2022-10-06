@@ -11,6 +11,9 @@ import Item from "./components/Products/Item";
 function App() {
   // Products State
   const [products, setProducts] = useState([])
+  // Cart State
+  const [cart, setCart] = useState([])
+
   // Fetching Products Data
   useEffect(() => {
     fetch("https://blowg.herokuapp.com/products")
@@ -18,13 +21,20 @@ function App() {
     .then((data) => setProducts(data))
   },[])
 
+  // Add Item to Cart
+  function addToCart(item){
+    const filterCart = cart.filter((product) => product.id !== item.id)
+    const newCart = [...filterCart, item]
+    setCart(newCart)
+  }
+
   return (
     <Router>
       <NavBar/>
       <Routes>
         <Route index element={<Home/>}/>
         <Route path="products" element={<Products products={products}/>}/>
-        <Route path="products/:title" element={<Item itemData={products}/>}/>
+        <Route path="products/:title" element={<Item itemData={products} addToCart={addToCart}/>}/>
         <Route path="cart" element={<Cart/>}/>
         <Route path="contact" element={<Contact/>}/>
       </Routes>
