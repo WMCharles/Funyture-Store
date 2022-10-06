@@ -14,7 +14,7 @@ export default function Products({products}) {
         </div>
         <div className='products-wrapper'>
           {products.map((product, index) =>
-              <Product product={product}/>
+              <Product product={product} key={index}/>
           )} 
         </div>
     </div>
