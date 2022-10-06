@@ -1,5 +1,6 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import "./AddProduct.css"
+import { useParams } from 'react-router-dom'
 
 export default function AddProduct({addToProducts}) {
     const [formData, setFormData] = useState({
@@ -13,10 +14,24 @@ export default function AddProduct({addToProducts}) {
         setFormData({...formData, [event.target.name]: event.target.value})
     }
 
+    // Params Constant
+    const params = useParams()
+    const [id, setId] = useState(params.id)
+
+    useEffect(()=>{
+        if(id){
+            fetch(`https://blowg.herokuapp.com/products/${id}`)
+            .then(resp=>resp.json())
+            .then((item)=>{
+                setFormData(item);
+            })
+        }},
+       [id]);
+
     function handleSubmit(event){
         event.preventDefault()
-        fetch("https://blowg.herokuapp.com/products", {
-            method: "POST",
+        fetch(`https://blowg.herokuapp.com/products/${id ? '/'+id : ''}`, {
+            method: id ? "PATCH" : "POST",
             headers: {
                 "content-type":"application/json"
             },
