@@ -4,10 +4,19 @@
     margin: 4em auto 0 auto;
 }
 
-.products h2 {
+.headers {
+    margin: 0 1em;
+    margin-bottom: 2em;
+}
+
+h1 {
     text-align: center;
 }
 
+h3 {
+    color: blue;
+    cursor: pointer;
+}
 .product-container {
     width: 30%;
     margin: 0 1em;
