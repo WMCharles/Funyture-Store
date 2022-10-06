@@ -4,8 +4,8 @@ import { Button } from '../Button/Button';
 export default function Home() {
   return (
     <div className='hero-container'>
-      <h1>ADVENTURE AWAITS</h1>
-      <p>What are you waiting for?</p>
+      <h1>FUNiTURE STORE</h1>
+      <p>What are you looking for?</p>
       <div className='hero-btns'>
         <Button
           className='btns'
