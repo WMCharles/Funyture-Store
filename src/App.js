@@ -35,6 +35,13 @@ function App() {
     const newCart = cart.filter((product) => product.id !== item.id)
     setCart(newCart)
   }
+
+  // Add item to products catalog
+  function addToProducts(item){
+    const newProducts = [...products, item]
+    setProducts(newProducts)
+  }
+
   return (
     <Router>
       <NavBar/>
@@ -42,7 +49,7 @@ function App() {
         <Route index element={<Home/>}/>
         <Route path="products" element={<Products products={products}/>}/>
         <Route path="products/:title" element={<Item itemData={products} addToCart={addToCart}/>}/>
-        <Route path="products/addproduct" element={<AddProduct/>}/>
+        <Route path="products/addproduct" element={<AddProduct addToProducts={addToProducts}/>}/>
         <Route path="cart" element={<Cart cart={cart} removeItem={removeFromCart}/>}/>
         <Route path="contact" element={<Contact/>}/>
       </Routes>
