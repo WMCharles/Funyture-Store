@@ -50,6 +50,7 @@ function App() {
         <Route path="products" element={<Products products={products}/>}/>
         <Route path="products/:title" element={<Item itemData={products} addToCart={addToCart}/>}/>
         <Route path="products/addproduct" element={<AddProduct addToProducts={addToProducts}/>}/>
+        <Route path="products/edit/:id" element={<AddProduct addToProducts={addToProducts}/>}/>
         <Route path="cart" element={<Cart cart={cart} removeItem={removeFromCart}/>}/>
         <Route path="contact" element={<Contact/>}/>
       </Routes>
