@@ -27,7 +27,12 @@ function App() {
     const newCart = [...filterCart, item]
     setCart(newCart)
   }
- 
+  
+  // Remove Item From Cart
+  function removeFromCart(item){
+    const newCart = cart.filter((product) => product.id !== item.id)
+    setCart(newCart)
+  }
   return (
     <Router>
       <NavBar/>
