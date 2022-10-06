@@ -1,9 +1,9 @@
-.product {
+.Product {
     width: 70%;
     margin: 6em auto 0 auto;
 }
 
-.product h1 {
+.Product h1 {
     margin-bottom: 1em;
     text-align: center;
 }
@@ -20,9 +20,6 @@ form {
     margin-top: 1.2em ;
 }
 
-.addpost {
-    margin-top: 2em;
-}
 .input-control button {
     padding: 12px;
     border: none;

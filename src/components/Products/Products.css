@@ -9,11 +9,11 @@
     margin-bottom: 2em;
 }
 
-h1 {
+.headers h1 {
     text-align: center;
 }
 
-h3 {
+.headers h3 {
     color: blue;
     cursor: pointer;
 }
