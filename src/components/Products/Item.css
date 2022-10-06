@@ -1,10 +1,10 @@
-.Product {
+.ProductDetail {
     width: 70%;
     height: 100vh;
     margin: 6em auto 0 auto;
 }
 
-.Product h1 {
+h1 {
     margin-bottom: 1em;
 }
 
@@ -27,6 +27,7 @@
 .Description h3 {
     color: blue;
     margin-bottom: 1em;
+    cursor: pointer;
 }
 
 .Description p {

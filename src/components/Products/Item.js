@@ -8,8 +8,8 @@ export default function Item({itemData, addToCart}) {
         addToCart(item)
     }
     return (
-        <div className='Product'>
-            <h1>Product Details</h1>
+        <div className='ProductDetail'>
+            <h1 className='pagetitle'>Product Details</h1>
             {itemData.filter((item) => item.title === title).map((product, index) =>
                 <div className='Item' key={index}>
                     <div className='productImage'>
@@ -17,7 +17,8 @@ export default function Item({itemData, addToCart}) {
                     </div>
                     <div className='Description'>
                         <h2>{product.title}</h2>
-                        <h3>$ {product.price}</h3>
+                        <h3>Edit Details</h3>
+                        <h2>$ {product.price}</h2>
                         <p>{product.description}</p>
                         <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
                     </div>
