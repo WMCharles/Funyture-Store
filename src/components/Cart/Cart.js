@@ -1,35 +1,15 @@
 import React from 'react'
 import "./Cart.css"
+import CartItem from './CartItem'
 
 export default function Cart({cart}) {
   return (
     <div className='cart'>
       <h1>Shopping Cart</h1>
       {cart.map((item) => 
-        <div className='item'>
-          <div className='image'>
-            <img src={item.image} alt="" />
-          </div>
-          <div className='description'>
-            <div>
-              <h3>{item.title}</h3>
-              <br/>
-              <h3 className='price'>$ {item.price}</h3>
-            </div>
-          </div>
-          <div className='quantity'>
-            <button>+</button> 1 <button>-</button>
-          </div>
-          <div className='total-amount'>
-            <h2>$ {item.price}</h2>
-            <br/>
-            <a href="#">Remove</a>
-          </div>
-        </div>
+        <CartItem item={item}/>
       )}
-      
       <hr/>
-      
       <div className='net'>
         <div></div>
         <div></div>
