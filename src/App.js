@@ -27,7 +27,7 @@ function App() {
     const newCart = [...filterCart, item]
     setCart(newCart)
   }
-
+ 
   return (
     <Router>
       <NavBar/>
@@ -35,7 +35,7 @@ function App() {
         <Route index element={<Home/>}/>
         <Route path="products" element={<Products products={products}/>}/>
         <Route path="products/:title" element={<Item itemData={products} addToCart={addToCart}/>}/>
-        <Route path="cart" element={<Cart/>}/>
+        <Route path="cart" element={<Cart cart={cart}/>}/>
         <Route path="contact" element={<Contact/>}/>
       </Routes>
     </Router>
