@@ -2,12 +2,12 @@ import React from 'react'
 import "./Cart.css"
 import CartItem from './CartItem'
 
-export default function Cart({cart}) {
+export default function Cart({cart, removeItem}) {
   return (
     <div className='cart'>
       <h1>Shopping Cart</h1>
       {cart.map((item) => 
-        <CartItem item={item}/>
+        <CartItem item={item} removeItem={removeItem}/>
       )}
       <hr/>
       <div className='net'>

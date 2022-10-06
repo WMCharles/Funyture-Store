@@ -40,7 +40,7 @@ function App() {
         <Route index element={<Home/>}/>
         <Route path="products" element={<Products products={products}/>}/>
         <Route path="products/:title" element={<Item itemData={products} addToCart={addToCart}/>}/>
-        <Route path="cart" element={<Cart cart={cart}/>}/>
+        <Route path="cart" element={<Cart cart={cart} removeItem={removeFromCart}/>}/>
         <Route path="contact" element={<Contact/>}/>
       </Routes>
     </Router>
