@@ -5,11 +5,14 @@ import Product from './Product'
 export default function Products({products}) {
   return (
     <div className='products'>
-        <h2>FUNitures</h2>
+        <div className='headers'>
+          <h1>FUNITURES</h1>
+          <h3>ADD FUNITURES</h3>
+        </div>
         <div className='products-wrapper'>
-            {products.map((product, index) =>
-                <Product product={product}/>
-            )} 
+          {products.map((product, index) =>
+              <Product product={product}/>
+          )} 
         </div>
     </div>
   )
