@@ -6,6 +6,7 @@ export default function AddProduct({addToProducts}) {
 
      // Params Constant
      const params = useParams()
+     // eslint-disable-next-line no-unused-vars
      const [id, setId] = useState(params.id)
 
     // Handling change in form
@@ -44,20 +45,8 @@ export default function AddProduct({addToProducts}) {
             body: JSON.stringify(formData)
         })
         .then((res) => res.json())
-        .then((item) => console.log(item))
+        .then((item) => addToProducts(item))
     }
-
-    // function handleSubmit(e){
-    //     e.preventDefault()
-    //     fetch(`https://wild-ruby-snail-shoe.cyclic.app/products/${id ? '/'+id : ''}`, {
-    //         method: id ? "PUT" : "POST",
-    //         headers: {
-    //             "content-type":"application/json"
-    //         },
-    //         body: JSON.stringify(formData)
-    //     })
-    //     .then((item) => console.log(item))
-    // }
 
     return (
         <div className='Product'>
