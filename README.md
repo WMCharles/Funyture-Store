@@ -19,6 +19,7 @@ This is an e-commerce site built in React that I did as my Phase-2 Independent P
 * Products Page - Displays available furnitures in the shop
 * Product page - Displays product details
 * Cart Page - Displays items in your cart, their prices and the total amount of these products.
+* Contact Page - Contact info
 
 ### Home Page
 
