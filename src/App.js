@@ -30,6 +30,11 @@ function App() {
     setCart(newCart)
   }
   
+  // Delete from Cart
+  function deleteItem(deletedItem){
+    const updatedTodos = products.filter((item) => item.id !== deletedItem.id)
+    setProducts(updatedTodos)
+}
   // Remove Item From Cart
   function removeFromCart(item){
     const newCart = cart.filter((product) => product.id !== item.id)
@@ -60,7 +65,7 @@ function App() {
       <Routes>
         <Route index element={<Home/>}/>
         <Route path="products" element={<Products products={products}/>}/>
-        <Route path="products/:title" element={<Item itemData={products} addToCart={addToCart}/>}/>
+        <Route path="products/:title" element={<Item itemData={products} deleteItem={deleteItem} addToCart={addToCart}/>}/>
         <Route path="products/addproduct" element={<AddProduct addToProducts={addToProducts}/>}/>
         <Route path="products/edit/:id" element={<AddProduct addToProducts={addToProducts}/>}/>
         <Route path="cart" element={<Cart cart={cart} removeItem={removeFromCart} handleChange={handleChange}/>}/>
