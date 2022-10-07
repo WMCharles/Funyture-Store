@@ -20,7 +20,7 @@ export default function AddProduct({addToProducts}) {
 
     useEffect(()=>{
         if(id){
-            fetch(`https://blowg.herokuapp.com/products/${id}`)
+            fetch(`https://wild-ruby-snail-shoe.cyclic.app/products/${id}`)
             .then(resp=>resp.json())
             .then((item)=>{
                 setFormData(item);
@@ -30,7 +30,7 @@ export default function AddProduct({addToProducts}) {
 
     function handleSubmit(event){
         event.preventDefault()
-        fetch(`https://blowg.herokuapp.com/products/${id ? '/'+id : ''}`, {
+        fetch(`https://wild-ruby-snail-shoe.cyclic.app/products/${id ? '/'+id : ''}`, {
             method: id ? "PATCH" : "POST",
             headers: {
                 "content-type":"application/json"
