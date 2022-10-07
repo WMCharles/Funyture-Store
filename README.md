@@ -20,8 +20,12 @@ This is an e-commerce site built in React that I did as my Phase-2 Independent P
 * Product page - Displays product details
 * Cart Page - Displays items in your cart, their prices and the total amount of these products.
 
+### Home Page
+
+![Home Page](https://github.com/WMCharles/Phase-2-Independent-Project/blob/main/funiture.png)
 ### Demo
 
+![](https://github.com/WMCharles/Phase-2-Independent-Project/blob/main/InShot_20221007_164317342.gif)
 
 
 ## Technologies Used
