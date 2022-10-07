@@ -50,18 +50,10 @@ Install dependecies
 ```
 npm install
 ```
-Install react-router-dom
-```
-npm i react-router-dom
-````
-Run server
-```
-npm run server
-```
-Start project
+Run
 ```
 npm start
-```
+````
 ## Contributions
 
 1. Fork this repository.
