@@ -10,7 +10,7 @@ export default function Products({products}) {
     <div className='products'>
         <div className='headers'>
           <h1>FUNITURES</h1>
-          <h3 onClick={() => {navigate('/products/addproduct')}}>ADD FUNITURES</h3>
+          <h3 onClick={() => {navigate('/products/addproduct')}}>ADD FUNITURE</h3>
         </div>
         <div className='products-wrapper'>
           {products.map((product, index) =>
