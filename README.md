@@ -2,17 +2,15 @@
 
 This is an e-commerce site built in React that I did as my Phase-2 Independent Project at Moringa/FlatIron Bootcamp. 
 
-
 ## Table of content
 
 + [Project Features](#project-features)
-+ [Home Page](#home-page)
-+ [Post Page](#post-page)
++ [Demo Page](#home-page)
 + [Technologies Used](#technologies-used)
 + [Installation](#installation--set-up)
 + [Contributions](#contributions)
-+ [Author](#author)
 + [Bugs & Feature Request](#bugs--fixes--feature-request)
++ [Author](#author)
 
 ## Project Features
 
@@ -22,13 +20,9 @@ This is an e-commerce site built in React that I did as my Phase-2 Independent P
 * Product page - Displays product details
 * Cart Page - Displays items in your cart, their prices and the total amount of these products.
 
-### Home Page
+### Demo
 
-![image](https://github.com/WMCharles/React-Blog/blob/main/hoome.png)
 
-### Post Page
-
-![image](https://github.com/WMCharles/React-Blog/blob/main/single-post.png)
 
 ## Technologies Used
 
