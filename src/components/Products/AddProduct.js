@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import "./AddProduct.css"
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 export default function AddProduct({addToProducts}) {
 
@@ -8,7 +8,9 @@ export default function AddProduct({addToProducts}) {
      const params = useParams()
      // eslint-disable-next-line no-unused-vars
      const [id, setId] = useState(params.id)
-
+    // navigate
+    const navigate = useNavigate()
+    
     // Handling change in form
     const [formData, setFormData] = useState({
         title:"",
@@ -46,6 +48,9 @@ export default function AddProduct({addToProducts}) {
         })
         .then((res) => res.json())
         .then((item) => addToProducts(item))
+        setTimeout(() => {
+            navigate(`/products`)
+          }, 2000);
     }
 
     return (

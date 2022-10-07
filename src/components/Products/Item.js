@@ -1,9 +1,10 @@
 import React from 'react'
 import "./Item.css"
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 export default function Item({itemData, addToCart, deleteItem}) {
     const {title} = useParams()
+    const navigate = useNavigate()
     function handleAddToCart(item){
         addToCart(item)
     }
@@ -25,10 +26,10 @@ export default function Item({itemData, addToCart, deleteItem}) {
                     <div className='Description'>
                         <h2>{product.title}</h2>
                         <a href={`edit/${product.id}`}><h3>Edit Details</h3></a>
-                        <h3 onClick={() => handleDelete(product)}>Delete Item</h3>
+                        <h3 onClick={() => {handleDelete(product); navigate(`/products`)}}>Delete Item</h3>
                         <h2>$ {product.price}</h2>
                         <p>{product.description}</p>
-                        <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
+                        <button onClick={() => {handleAddToCart(product); navigate(`/cart`)}}>Add to Cart</button>
                     </div>
                 </div>
             )}
