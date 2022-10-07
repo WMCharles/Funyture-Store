@@ -18,7 +18,7 @@ function App() {
 
   // Fetching Products Data
   useEffect(() => {
-    fetch("https://wild-ruby-snail-shoe.cyclic.app/products")
+    fetch("https://blowg.herokuapp.com/products")
     .then((res) => res.json())
     .then((data) => setProducts(data))
   },[])

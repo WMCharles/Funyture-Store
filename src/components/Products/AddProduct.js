@@ -3,50 +3,67 @@ import "./AddProduct.css"
 import { useParams } from 'react-router-dom'
 
 export default function AddProduct({addToProducts}) {
+
+     // Params Constant
+     const params = useParams()
+     const [id, setId] = useState(params.id)
+
+    // Handling change in form
     const [formData, setFormData] = useState({
-        title: "",
-        price:"",
+        title:"",
         description:"",
+        price: 0,
         image:""
-
     })
-    function handleInputChange(event){
-        setFormData({...formData, [event.target.name]: event.target.value})
-    }
 
-    // Params Constant
-    const params = useParams()
-    // eslint-disable-next-line no-unused-vars
-    const [id, setId] = useState(params.id)
+    function handleInputChange (event){
+        setFormData({
+          ...formData,
+          [event.target.name]: event.target.value
+      });
+    }
 
     useEffect(()=>{
         if(id){
-            fetch(`https://wild-ruby-snail-shoe.cyclic.app/products/${id}`)
+            fetch(`https://blowg.herokuapp.com/products/${id}`)
             .then(resp=>resp.json())
             .then((item)=>{
                 setFormData(item);
             })
         }},
-       [id]);
-
-    function handleSubmit(event){
-        event.preventDefault()
-        fetch(`https://wild-ruby-snail-shoe.cyclic.app/products/${id ? '/'+id : ''}`, {
-            method: id ? "PATCH" : "POST",
+       [id]
+    );
+ 
+    function handleFormSubmit(e){
+        e.preventDefault()
+        fetch(`https://blowg.herokuapp.com/products/${id ? '/'+id : ''}`, {
+            method: id ? "PUT" : "POST",
             headers: {
                 "content-type":"application/json"
             },
             body: JSON.stringify(formData)
         })
-        .then(res => res.json())
-        .then((item) => addToProducts(item))        
+        .then((res) => res.json())
+        .then((item) => console.log(item))
     }
+
+    // function handleSubmit(e){
+    //     e.preventDefault()
+    //     fetch(`https://wild-ruby-snail-shoe.cyclic.app/products/${id ? '/'+id : ''}`, {
+    //         method: id ? "PUT" : "POST",
+    //         headers: {
+    //             "content-type":"application/json"
+    //         },
+    //         body: JSON.stringify(formData)
+    //     })
+    //     .then((item) => console.log(item))
+    // }
 
     return (
         <div className='Product'>
             <h1>Add Product</h1>
             <div className='AddProduct'>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleFormSubmit}>
                     <div className='input-control'>
                         <label>Title</label>
                         <input type="text" required name='title' onChange={handleInputChange} value={formData.title}/>

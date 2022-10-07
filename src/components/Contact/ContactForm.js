@@ -13,7 +13,7 @@ export default function ContactForm() {
 
     function handleSubmit(e){
         e.preventDefault()
-        fetch("https://wild-ruby-snail-shoe.cyclic.app/messages", {
+        fetch("https://blowg.herokuapp.com/messages", {
             method: "POST",
             headers: {
                 "content-type":"application/json"
