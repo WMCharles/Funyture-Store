@@ -16,6 +16,7 @@ export default function AddProduct({addToProducts}) {
 
     // Params Constant
     const params = useParams()
+    // eslint-disable-next-line no-unused-vars
     const [id, setId] = useState(params.id)
 
     useEffect(()=>{

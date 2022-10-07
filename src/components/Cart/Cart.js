@@ -8,6 +8,7 @@ export default function Cart({cart, removeItem, handleChange}) {
 
   function handlePrice(){
     let total = 0
+    // eslint-disable-next-line no-lone-blocks
     {cart.map((item) => (total += item.price * item.quantity))}
     setPrice(total)
   }
