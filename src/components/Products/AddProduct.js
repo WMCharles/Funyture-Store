@@ -16,7 +16,8 @@ export default function AddProduct({addToProducts}) {
         title:"",
         description:"",
         price: 0,
-        image:""
+        image:"",
+        quantity:1
     })
 
     function handleInputChange (event){
