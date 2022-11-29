@@ -18,7 +18,7 @@ function App() {
 
   // Fetching Products Data
   useEffect(() => {
-    fetch("https://blowg.herokuapp.com/products")
+    fetch('/products')
     .then((res) => res.json())
     .then((data) => setProducts(data))
   },[])
